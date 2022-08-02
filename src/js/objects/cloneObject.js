@@ -1,3 +1,5 @@
+// создает глубокую копию объекта в отличие от Object.assign()
+
 function cloneObject(obj) {
     let newObject = {};
 

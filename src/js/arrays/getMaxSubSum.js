@@ -1,14 +1,33 @@
 // Поиск максимальной суммы в подмассиве
+// Kadane's algorithm
 function getMaxSubSum(arr) {
-    let max = 0;
-    let sum = 0;
+    let currSum = 0;
+    let result = {
+        startIndex: 0,
+        endIndex: 0,
+        sum: 0
+    };
+
     for (let i = 0; i < arr.length; i++) {
-        sum = arr[i] + sum;
-        max = Math.max(max, sum);
-        sum = sum < 0 ? 0 : sum;
+        currSum = arr[i] + currSum;
+
+        if (currSum > result.sum){
+            result.sum = currSum;
+            result.endIndex = i;
+        }
+
+        if (currSum < 0){
+            currSum = 0;
+            result.startIndex = result.endIndex + 1;
+        }
     }
 
-    return max;
+    return result;
 }
 
-console.log(getMaxSubSum([2, -8, 5, -1, 2, -3, 2]));
+console.log(getMaxSubSum([-1, 2, 3, -9])); //5
+console.log(getMaxSubSum([2, -1, 2, 3, -9])); //6
+console.log(getMaxSubSum([-1, 2, 3, -9, 11])); //11
+console.log(getMaxSubSum([-2, -1, 1, 2])); //3
+console.log(getMaxSubSum([100, -9, 2, -3, 5])); //100
+console.log(getMaxSubSum([1, 2, 3])); //6

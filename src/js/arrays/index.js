@@ -53,7 +53,7 @@ console.log(`Объедининие массивов:`, union);
 
 let difference = arr4.filter(elem => !arr5.includes(elem))
 let difference1 = arr5.filter(elem => !arr4.includes(elem))
-console.log(`Объедининие массивов:`, difference, difference1);
+console.log(`Разность:`, difference, difference1);
 
 let difference3 = [...difference1, ...difference];
 console.log(`Симетричная разность:`, difference3);
