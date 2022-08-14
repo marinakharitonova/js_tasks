@@ -36,3 +36,18 @@ function printNumbers(from, to) {
 }
 
 printNumbers(2, 6)
+
+// ф-ция выполняется сразу (нет задержки 1с перед первым вызовом)
+function printNumbers1(from, to) {
+    function go(){
+        console.log(from);
+        from++;
+
+        if (from > to){
+            clearTimeout(timer)
+        }
+
+    }
+    go();
+    let timer = setInterval(go, 1000)
+}
