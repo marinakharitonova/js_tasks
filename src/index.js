@@ -1,5 +1,1 @@
 import './styles/index.scss'
-
-
-
-
