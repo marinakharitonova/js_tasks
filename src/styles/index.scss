@@ -2,7 +2,7 @@ $titleColor: mediumorchid;
 
 @font-face {
   font-family: "Mouse Memoirs";
-  src: url("../assets/fonts/MouseMemoirs-Regular.ttf") format("ttf");
+  src: url("../assets/fonts/MouseMemoirs-Regular.woff2") format("woff2");
   font-weight: 400;
 }
 
@@ -24,17 +24,4 @@ $titleColor: mediumorchid;
   background: url("../assets/images/snail.jpg") no-repeat center / contain;
 }
 
-.circle {
-  transition-property: width, height;
-  transition-duration: 2s;
-  position: fixed;
-  transform: translateX(-50%) translateY(-50%);
-  background-color: red;
-  border-radius: 50%;
-}
-
-.message-ball {
-  font-size: 20px;
-  line-height: 200px;
-  text-align: center;
-}
+@import "modal";

@@ -11,11 +11,20 @@
 <div class="container">
     <h1 class="title">Almost before we knew it, we had left the ground.</h1>
     <div class="block"></div>
-
-<!--    Ширина и высота для инлайновых элементов игнорируется-->
-    <span style="background: pink; width: 300px; height: 300px">Hello</span>
+    <!--    Ширина и высота для инлайновых элементов игнорируется-->
+    <span style="background: pink; width: 300px; height: 300px;">Hello</span>
 
     <div style="display: list-item; list-style:inside square">Пункт 1</div>
+
+    <!-- В данном примере модальное окно по центру, фиксированной высоты, подложка под ним прокручивается, есои страница меньше по высоте -->
+    <div class="modal-back" id="modal-overlay"></div>
+    <div class="modal" id="modal">
+        <div class="modal__content">
+            <button id="modal-close" class="modal__close">Close me!</button>
+        </div>
+    </div>
+
+    <button id="modal-open">Open modal</button>
 </div>
 </body>
 </html>
